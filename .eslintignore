@@ -1,2 +1,9 @@
-node_modules
-dist
+*.config.js
+*.config.cjs
+*.config.mjs
+
+.next/
+dist/
+build/
+
+node_modules/
