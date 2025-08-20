@@ -1,9 +1,10 @@
-'use client'
+'use client';
 import { createTheme } from '@mui/material/styles';
 
 const colors = {
   darkBg: '#232946',
   lightBg: '#d4d8f0',
+  darkRowBg: '#353b7d',
   card: '#fffffe',
   textLight: '#fffffe',
   textDark: '#232946',
@@ -15,11 +16,14 @@ const colors = {
 };
 
 export const darkTheme = createTheme({
+  typography: {
+    fontFamily: 'var(--font-inter), sans-serif',
+  },
   palette: {
     mode: 'dark',
     background: {
       default: colors.darkBg,
-      paper: colors.card,
+      paper: colors.darkRowBg,
     },
     text: {
       primary: colors.textLight,
@@ -61,6 +65,9 @@ export const darkTheme = createTheme({
 });
 
 export const lightTheme = createTheme({
+  typography: {
+    fontFamily: 'var(--font-inter), sans-serif',
+  },
   palette: {
     mode: 'light',
     background: {
