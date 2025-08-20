@@ -21,7 +21,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"],
+  
+      "@components/*": ["components/*"],
+      "@layout/*": ["components/layout/*"],
+      "@providers/*": ["providers/*"],
+      "@theme/*": ["theme/*"],
+      "@utils/*": ["utils/*"]
+    }
   },
   "include": [
     "**/*.ts",

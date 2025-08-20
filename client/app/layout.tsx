@@ -1,8 +1,7 @@
-import { Header } from './components/Header';
+import { Header } from '@components/Header';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './theme/theme';
-import { CssBaseline } from '@mui/material';
+import { AppThemeProvider } from '@providers/ThemeProvider';
+
 
 
 export const metadata = {
@@ -15,11 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-          <CssBaseline/>
+          <AppThemeProvider>
           <Header />
           {children}
-          </ThemeProvider>
+          </AppThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
