@@ -10,7 +10,6 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 export const Header = () => {
   const { mode, toggle } = useThemeMode()
   return (
-   
     <HeaderWrapper>
     <Constrained>
       <HeaderInner>

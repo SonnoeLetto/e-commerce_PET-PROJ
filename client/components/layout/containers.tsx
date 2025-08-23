@@ -24,7 +24,6 @@ export const Constrained = styled(Container)(({ theme }) => ({
   },
 }));
 
-/** Контентная часть (растягивается между Header и Footer) */
 export const Main = styled('main')({
   flex: 1,
   display: 'flex',

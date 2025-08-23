@@ -1,4 +1,3 @@
-'use client'
 import { Typography, Link as MuiLink } from '@mui/material';
 import { Constrained } from '@components/layout/containers';
 import { FooterWrapper, FooterInner, FooterLinks } from './Footer.styled';
