@@ -1,35 +1,35 @@
-'use client'
-import { useMemo, useTransition } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { FilterBar, Row } from './FilterBar.styled'
-import { TextField, MenuItem, Button } from '@mui/material'
+'use client';
+import { useMemo, useTransition } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { FilterBar, Row } from './FilterBar.styled';
+import { TextField, MenuItem, Button } from '@mui/material';
 
 function useQuerySync() {
-  const router = useRouter()
-  const search = useSearchParams()
-  const [isPending, startTransition] = useTransition()
+  const router = useRouter();
+  const search = useSearchParams();
+  const [isPending, startTransition] = useTransition();
 
-  const params = useMemo(() => new URLSearchParams(search.toString()), [search])
+  const params = useMemo(() => new URLSearchParams(search.toString()), [search]);
 
   function setParam(key: string, value?: string) {
-    if (value && value.length) params.set(key, value)
-    else params.delete(key)
+    if (value && value.length) params.set(key, value);
+    else params.delete(key);
     startTransition(() => {
-      router.replace(`?${params.toString()}`, { scroll: false })
-    })
+      router.replace(`?${params.toString()}`, { scroll: false });
+    });
   }
 
   function get(key: string) {
-    return search.get(key) ?? ''
+    return search.get(key) ?? '';
   }
 
   function reset() {
     startTransition(() => {
-      router.replace('?', { scroll: false })
-    })
+      router.replace('?', { scroll: false });
+    });
   }
 
-  return { get, setParam, reset, isPending }
+  return { get, setParam, reset, isPending };
 }
 
 const categories = [
@@ -37,16 +37,16 @@ const categories = [
   { value: 'clothes', label: 'Clothes' },
   { value: 'electronics', label: 'Electronics' },
   { value: 'home', label: 'Home' },
-]
+];
 
 const sorts = [
   { value: '', label: 'Sort' },
   { value: 'price-asc', label: 'Price ↑' },
   { value: 'price-desc', label: 'Price ↓' },
-]
+];
 
 export default function Filters() {
-  const { get, setParam, reset, isPending } = useQuerySync()
+  const { get, setParam, reset, isPending } = useQuerySync();
 
   return (
     <FilterBar aria-busy={isPending}>
@@ -64,7 +64,11 @@ export default function Filters() {
           onChange={(e) => setParam('category', e.target.value)}
           size="small"
         >
-          {categories.map(c => <MenuItem key={c.value} value={c.value}>{c.label}</MenuItem>)}
+          {categories.map((c) => (
+            <MenuItem key={c.value} value={c.value}>
+              {c.label}
+            </MenuItem>
+          ))}
         </TextField>
         <TextField
           label="Min price"
@@ -89,14 +93,20 @@ export default function Filters() {
           onChange={(e) => setParam('sort', e.target.value)}
           size="small"
         >
-          {sorts.map(s => <MenuItem key={s.value} value={s.value}>{s.label}</MenuItem>)}
+          {sorts.map((s) => (
+            <MenuItem key={s.value} value={s.value}>
+              {s.label}
+            </MenuItem>
+          ))}
         </TextField>
         <div style={{ display: 'none' }} />
       </Row>
 
       <div style={{ marginTop: 8, display: 'flex', gap: 8 }}>
-        <Button variant="outlined" onClick={reset}>Reset</Button>
+        <Button variant="outlined" onClick={reset}>
+          Reset
+        </Button>
       </div>
     </FilterBar>
-  )
+  );
 }

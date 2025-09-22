@@ -1,3 +1,5 @@
+// import 'modern-normalize/modern-normalize.css';
+// import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { AppThemeProvider } from '@providers/ThemeProvider';
@@ -26,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Main>
                 <Constrained>{children}</Constrained>
               </Main>
-              <Footer/>
+              <Footer />
             </AppShell>
           </AppThemeProvider>
         </AppRouterCacheProvider>

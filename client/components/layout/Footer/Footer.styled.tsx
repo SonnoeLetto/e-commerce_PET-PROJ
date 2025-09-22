@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { styled } from '@mui/material/styles';
 import { Theme } from '@emotion/react';
 
@@ -7,7 +7,7 @@ export const FooterWrapper = styled('footer')(({ theme }: { theme: Theme }) => (
   borderTop: `1px solid ${theme.palette.divider}`,
   backgroundColor: theme.palette.background.paper, // чуть светлее, чем page bg
   color: theme.palette.text.secondary,
-}))
+}));
 
 export const FooterInner = styled('div')(({ theme }: { theme: Theme }) => ({
   minHeight: 64,
@@ -22,7 +22,7 @@ export const FooterInner = styled('div')(({ theme }: { theme: Theme }) => ({
     alignItems: 'flex-start',
     gap: theme.spacing(1),
   },
-}))
+}));
 
 export const FooterLinks = styled('nav')(({ theme }: { theme: Theme }) => ({
   display: 'flex',
@@ -34,4 +34,4 @@ export const FooterLinks = styled('nav')(({ theme }: { theme: Theme }) => ({
   'a:hover': {
     textDecoration: 'underline',
   },
-}))
+}));

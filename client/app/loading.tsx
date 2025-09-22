@@ -1,5 +1,5 @@
-import { Skeleton } from '@mui/material'
-import { Constrained, Main } from '@components/layout/containers'
+import { Skeleton } from '@mui/material';
+import { Constrained, Main } from '@components/layout/containers';
 
 export default function Loading() {
   return (
@@ -9,5 +9,5 @@ export default function Loading() {
         <Skeleton variant="rectangular" width="100%" height={200} sx={{ mt: 2 }} />
       </Constrained>
     </Main>
-  )
+  );
 }

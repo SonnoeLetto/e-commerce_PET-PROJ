@@ -14,18 +14,12 @@ export const Constrained = styled(Container)(({ theme }) => ({
   maxWidth: 1200,
   paddingLeft: 16,
   paddingRight: 16,
-  [theme.breakpoints.up('md')]: {
-    paddingLeft: 24,
-    paddingRight: 24,
-  },
-  [theme.breakpoints.up('lg')]: {
-    paddingLeft: 32,
-    paddingRight: 32,
-  },
+  margin: '0 auto',
 }));
 
 export const Main = styled('main')({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
+  padding: '20px 0',
 });

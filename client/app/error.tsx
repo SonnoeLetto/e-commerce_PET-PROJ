@@ -1,6 +1,6 @@
-'use client'
-import { Typography, Button } from '@mui/material'
-import { Constrained, Main } from '@components/layout/containers'
+'use client';
+import { Typography, Button } from '@mui/material';
+import { Constrained, Main } from '@components/layout/containers';
 
 export default function Error({ reset }: { reset: () => void }) {
   return (
@@ -17,5 +17,5 @@ export default function Error({ reset }: { reset: () => void }) {
         </Button>
       </Constrained>
     </Main>
-  )
+  );
 }

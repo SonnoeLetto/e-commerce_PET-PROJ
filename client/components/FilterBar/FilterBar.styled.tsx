@@ -1,5 +1,5 @@
-'use client'
-import { styled } from '@mui/material/styles'
+'use client';
+import { styled } from '@mui/material/styles';
 
 export const FilterBar = styled('section')(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
@@ -7,7 +7,7 @@ export const FilterBar = styled('section')(({ theme }) => ({
   borderRadius: 16,
   padding: theme.spacing(2),
   marginBottom: theme.spacing(2),
-}))
+}));
 
 export const Row = styled('div')(({ theme }) => ({
   display: 'grid',
@@ -16,4 +16,4 @@ export const Row = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     gridTemplateColumns: '1fr 1fr',
   },
-}))
+}));

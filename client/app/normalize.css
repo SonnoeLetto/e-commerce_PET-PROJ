@@ -1,0 +1,56 @@
+/* ===== Optional minimal reset (opinionated) ===== */
+
+/* Сбрасываем отступы у типографики — контролируешь сам */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+}
+
+/* Списки без маркеров по умолчанию (если нужны — задашь в компоненте) */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Картинки не размазываются на ретине */
+img {
+  image-rendering: auto;
+}
+
+/* Медиа и SVG масштабируются, не вылезают */
+picture {
+  display: block;
+}
+
+/* Интерактив наследует шрифт и убираем странные курсоры */
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Формы без лишних outline: оставляем дефолтный, но делаем его заметнее при keyboard-focus */
+:focus-visible {
+  outline: 2px solid #1e90ff;
+  outline-offset: 2px;
+}
+
+/* Перенос длинных слов */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: anywhere;
+}

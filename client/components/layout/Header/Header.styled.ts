@@ -6,8 +6,7 @@ export const HeaderWrapper = styled('header')(({ theme }: { theme: Theme }) => (
   borderBottom: `1px solid ${theme.palette.divider}`,
   backgroundColor: theme.palette.background.paper,
   color: theme.palette.text.primary,
-}))
-
+}));
 
 export const HeaderInner = styled('div')(({ theme }: { theme: Theme }) => ({
   minHeight: 64,
@@ -15,4 +14,4 @@ export const HeaderInner = styled('div')(({ theme }: { theme: Theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   gap: theme.spacing(2),
-}))
+}));

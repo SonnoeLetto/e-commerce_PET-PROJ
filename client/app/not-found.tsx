@@ -1,6 +1,6 @@
-import { Typography, Button } from '@mui/material'
-import Link from 'next/link'
-import { Constrained, Main } from '@components/layout/containers'
+import { Typography, Button } from '@mui/material';
+import Link from 'next/link';
+import { Constrained, Main } from '@components/layout/containers';
 
 export default function NotFound() {
   return (
@@ -17,5 +17,5 @@ export default function NotFound() {
         </Button>
       </Constrained>
     </Main>
-  )
+  );
 }
