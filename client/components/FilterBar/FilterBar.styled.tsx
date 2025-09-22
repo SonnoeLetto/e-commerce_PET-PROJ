@@ -2,8 +2,8 @@
 import { styled } from '@mui/material/styles';
 
 export const FilterBar = styled('section')(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
   background: theme.palette.background.paper,
+  boxShadow: theme.shadows[2],
   borderRadius: 16,
   padding: theme.spacing(2),
   marginBottom: theme.spacing(2),

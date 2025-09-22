@@ -3,6 +3,7 @@ import { useMemo, useTransition } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FilterBar, Row } from './FilterBar.styled';
 import { TextField, MenuItem, Button } from '@mui/material';
+import { CustomTextField } from '../ui/CustomTextField';
 
 function useQuerySync() {
   const router = useRouter();
@@ -51,6 +52,11 @@ export default function Filters() {
   return (
     <FilterBar aria-busy={isPending}>
       <Row>
+        <CustomTextField
+          label="Search"
+          defaultValue={get('q')}
+          onChange={(e) => setParam('q', e.target.value)}
+        />
         <TextField
           label="Search"
           defaultValue={get('q')}
